@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04AC988E235F42860044FDEE /* UIScreenControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC988D235F42860044FDEE /* UIScreenControl.swift */; };
+		14ED38E1B91C371667109CBA /* libPods-haoxian.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5967D4F60888166C298533 /* libPods-haoxian.a */; };
 		623FDFBF235F191500DB0B14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623FDFBD235F191500DB0B14 /* ViewController.swift */; };
 		623FDFC0235F191500DB0B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623FDFBE235F191500DB0B14 /* AppDelegate.swift */; };
 		623FDFC6235F19C400DB0B14 /* SHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623FDFC5235F19C400DB0B14 /* SHBaseViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04AC9889235F3EC00044FDEE /* haoxian.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = haoxian.pch; sourceTree = "<group>"; };
+		04AC988D235F42860044FDEE /* UIScreenControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenControl.swift; sourceTree = "<group>"; };
 		623FDFBD235F191500DB0B14 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		623FDFBE235F191500DB0B14 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		623FDFC5235F19C400DB0B14 /* SHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHBaseViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +30,9 @@
 		62813274235D878300BC9D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62813277235D878300BC9D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62813279235D878300BC9D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6673256CD89AAC0022A0CCC3 /* Pods-haoxian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haoxian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-haoxian/Pods-haoxian.debug.xcconfig"; sourceTree = "<group>"; };
+		9A5967D4F60888166C298533 /* libPods-haoxian.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-haoxian.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C506FFB67EE4A0456DF48ECD /* Pods-haoxian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-haoxian.release.xcconfig"; path = "Pods/Target Support Files/Pods-haoxian/Pods-haoxian.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +40,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14ED38E1B91C371667109CBA /* libPods-haoxian.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04AC988C235F426B0044FDEE /* BaseControl */ = {
+			isa = PBXGroup;
+			children = (
+				04AC988D235F42860044FDEE /* UIScreenControl.swift */,
+			);
+			path = BaseControl;
+			sourceTree = "<group>";
+		};
+		087E73C095FBC89E84C278C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6673256CD89AAC0022A0CCC3 /* Pods-haoxian.debug.xcconfig */,
+				C506FFB67EE4A0456DF48ECD /* Pods-haoxian.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		623FDFBC235F191500DB0B14 /* AppLife */ = {
 			isa = PBXGroup;
 			children = (
 				623FDFBD235F191500DB0B14 /* ViewController.swift */,
 				623FDFBE235F191500DB0B14 /* AppDelegate.swift */,
+				04AC9889235F3EC00044FDEE /* haoxian.pch */,
 			);
 			path = AppLife;
 			sourceTree = "<group>";
@@ -67,6 +93,7 @@
 		623FDFC3235F199A00DB0B14 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				04AC988C235F426B0044FDEE /* BaseControl */,
 				623FDFC4235F19B100DB0B14 /* BaseUIViewController */,
 			);
 			path = Base;
@@ -85,6 +112,8 @@
 			children = (
 				6281326C235D878200BC9D87 /* haoxian */,
 				6281326B235D878200BC9D87 /* Products */,
+				087E73C095FBC89E84C278C2 /* Pods */,
+				ECF499C14EA6CF38B3370A46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +139,14 @@
 			path = haoxian;
 			sourceTree = "<group>";
 		};
+		ECF499C14EA6CF38B3370A46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A5967D4F60888166C298533 /* libPods-haoxian.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6281327C235D878300BC9D87 /* Build configuration list for PBXNativeTarget "haoxian" */;
 			buildPhases = (
+				1689B70AED4AF5FFF5219F59 /* [CP] Check Pods Manifest.lock */,
 				62813266235D878200BC9D87 /* Sources */,
 				62813267235D878200BC9D87 /* Frameworks */,
 				62813268235D878200BC9D87 /* Resources */,
@@ -176,12 +214,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1689B70AED4AF5FFF5219F59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-haoxian-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		62813266235D878200BC9D87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				623FDFC8235F19F400DB0B14 /* LoginViewController.swift in Sources */,
+				04AC988E235F42860044FDEE /* UIScreenControl.swift in Sources */,
 				623FDFC0235F191500DB0B14 /* AppDelegate.swift in Sources */,
 				623FDFC6235F19C400DB0B14 /* SHBaseViewController.swift in Sources */,
 				623FDFBF235F191500DB0B14 /* ViewController.swift in Sources */,
@@ -328,11 +392,14 @@
 		};
 		6281327D235D878300BC9D87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6673256CD89AAC0022A0CCC3 /* Pods-haoxian.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TDT34TC7ER;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/haoxian/AppLife/haoxian.pch";
 				INFOPLIST_FILE = haoxian/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,11 +413,14 @@
 		};
 		6281327E235D878300BC9D87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C506FFB67EE4A0456DF48ECD /* Pods-haoxian.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TDT34TC7ER;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/haoxian/AppLife/haoxian.pch";
 				INFOPLIST_FILE = haoxian/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
