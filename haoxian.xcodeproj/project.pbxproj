@@ -13,18 +13,19 @@
 		623FDFC0235F191500DB0B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623FDFBE235F191500DB0B14 /* AppDelegate.swift */; };
 		623FDFC6235F19C400DB0B14 /* SHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623FDFC5235F19C400DB0B14 /* SHBaseViewController.swift */; };
 		623FDFC8235F19F400DB0B14 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623FDFC7235F19F400DB0B14 /* LoginViewController.swift */; };
+		623FE004236131B500DB0B14 /* HaoxianPCH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623FE003236131B500DB0B14 /* HaoxianPCH.swift */; };
 		62813273235D878200BC9D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62813271235D878200BC9D87 /* Main.storyboard */; };
 		62813275235D878300BC9D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62813274235D878300BC9D87 /* Assets.xcassets */; };
 		62813278235D878300BC9D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62813276235D878300BC9D87 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04AC9889235F3EC00044FDEE /* haoxian.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = haoxian.pch; sourceTree = "<group>"; };
 		04AC988D235F42860044FDEE /* UIScreenControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenControl.swift; sourceTree = "<group>"; };
 		623FDFBD235F191500DB0B14 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		623FDFBE235F191500DB0B14 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		623FDFC5235F19C400DB0B14 /* SHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHBaseViewController.swift; sourceTree = "<group>"; };
 		623FDFC7235F19F400DB0B14 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		623FE003236131B500DB0B14 /* HaoxianPCH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaoxianPCH.swift; sourceTree = "<group>"; };
 		6281326A235D878200BC9D87 /* haoxian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haoxian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62813272235D878200BC9D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62813274235D878300BC9D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,7 +70,7 @@
 			children = (
 				623FDFBD235F191500DB0B14 /* ViewController.swift */,
 				623FDFBE235F191500DB0B14 /* AppDelegate.swift */,
-				04AC9889235F3EC00044FDEE /* haoxian.pch */,
+				623FE003236131B500DB0B14 /* HaoxianPCH.swift */,
 			);
 			path = AppLife;
 			sourceTree = "<group>";
@@ -244,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				623FE004236131B500DB0B14 /* HaoxianPCH.swift in Sources */,
 				623FDFC8235F19F400DB0B14 /* LoginViewController.swift in Sources */,
 				04AC988E235F42860044FDEE /* UIScreenControl.swift in Sources */,
 				623FDFC0235F191500DB0B14 /* AppDelegate.swift in Sources */,
@@ -397,7 +399,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TDT34TC7ER;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/haoxian/AppLife/haoxian.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/haoxian/AppLife/HaoxianPCH.swift";
 				INFOPLIST_FILE = haoxian/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -418,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TDT34TC7ER;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/haoxian/AppLife/haoxian.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/haoxian/AppLife/HaoxianPCH.swift";
 				INFOPLIST_FILE = haoxian/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
