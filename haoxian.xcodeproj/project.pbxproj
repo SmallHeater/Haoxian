@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0482EFF52361D9380073159B /* HttpHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482EFF42361D9380073159B /* HttpHead.swift */; };
 		04AC988E235F42860044FDEE /* UIScreenControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC988D235F42860044FDEE /* UIScreenControl.swift */; };
 		14ED38E1B91C371667109CBA /* libPods-haoxian.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5967D4F60888166C298533 /* libPods-haoxian.a */; };
 		623FDFBF235F191500DB0B14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623FDFBD235F191500DB0B14 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0482EFF42361D9380073159B /* HttpHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHead.swift; sourceTree = "<group>"; };
 		04AC988D235F42860044FDEE /* UIScreenControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenControl.swift; sourceTree = "<group>"; };
 		623FDFBD235F191500DB0B14 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		623FDFBE235F191500DB0B14 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				623FDFBD235F191500DB0B14 /* ViewController.swift */,
 				623FDFBE235F191500DB0B14 /* AppDelegate.swift */,
 				623FE003236131B500DB0B14 /* HaoxianPCH.swift */,
+				0482EFF42361D9380073159B /* HttpHead.swift */,
 			);
 			path = AppLife;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				62813266235D878200BC9D87 /* Sources */,
 				62813267235D878200BC9D87 /* Frameworks */,
 				62813268235D878200BC9D87 /* Resources */,
+				7AF885268A0DF2FD7D08990D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +242,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7AF885268A0DF2FD7D08990D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-haoxian/Pods-haoxian-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-haoxian/Pods-haoxian-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -245,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0482EFF52361D9380073159B /* HttpHead.swift in Sources */,
 				623FE004236131B500DB0B14 /* HaoxianPCH.swift in Sources */,
 				623FDFC8235F19F400DB0B14 /* LoginViewController.swift in Sources */,
 				04AC988E235F42860044FDEE /* UIScreenControl.swift in Sources */,

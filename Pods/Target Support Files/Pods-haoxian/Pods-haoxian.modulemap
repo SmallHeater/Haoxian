@@ -1,0 +1,6 @@
+module Pods_haoxian {
+  umbrella header "Pods-haoxian-umbrella.h"
+
+  export *
+  module * { export * }
+}
