@@ -8,10 +8,13 @@
 
 import UIKit
 import Alamofire
-#import "SVProgressHUD.h"
+//#import "SVProgressHUD.h"
 
 class LoginViewController: SHBaseViewController {
 
+    var phoneTextField:UITextField?
+    
+    
     //MARK:生命周期函数
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,19 +69,19 @@ class LoginViewController: SHBaseViewController {
         self.view.addSubview(titleLabel);
         
         //手机号输入框
-        let phoneTextField = UITextField();
-        phoneTextField.frame = CGRect(x: CGFloat(leftInterval), y: 181 + UIScreenControl().heightOfAddtionalHeader, width: MAINWIDTH - CGFloat(leftInterval * 2), height: 50);
-        phoneTextField.font = UIFont.systemFont(ofSize: 16);
-        phoneTextField.backgroundColor = Color_F8F8F9;
-        phoneTextField.textColor = Color_151515;
-        phoneTextField.placeholder = "输入手机号";
+        phoneTextField = UITextField();
+        phoneTextField?.frame = CGRect(x: CGFloat(leftInterval), y: 181 + UIScreenControl().heightOfAddtionalHeader, width: MAINWIDTH - CGFloat(leftInterval * 2), height: 50);
+        phoneTextField?.font = UIFont.systemFont(ofSize: 16);
+        phoneTextField?.backgroundColor = Color_F8F8F9;
+        phoneTextField?.textColor = Color_151515;
+        phoneTextField?.placeholder = "输入手机号";
         let leftView:UIView = UIView.init(frame: CGRect(x: 0, y: 0, width: 38, height: 50));
         let phoneImageView:UIImageView = UIImageView.init(image: UIImage(named: "shoujihao"));
         phoneImageView.frame = CGRect(x: 12, y: 16, width: 15, height: 18);
         leftView.addSubview(phoneImageView);
-        phoneTextField.leftView = leftView;
-        phoneTextField.leftViewMode = UITextField.ViewMode.always;
-        self.view.addSubview(phoneTextField);
+        phoneTextField?.leftView = leftView;
+        phoneTextField?.leftViewMode = UITextField.ViewMode.always;
+        self.view.addSubview(phoneTextField!);
         
         //验证码输入框
         let verificationCodeTF = UITextField();
@@ -102,30 +105,29 @@ class LoginViewController: SHBaseViewController {
         // 监听按钮的点击事件
         vcBtn.reactive.controlEvents(.touchUpInside).observeValues { (button) in
             
-//            print(verificationCodeTF.text!);
-//            if verificationCodeTF.text?.lengthOfBytes(using:.utf8) == 11{
-            
-                button.isUserInteractionEnabled = false;
-            
-            Alamofire.SessionManager.default.delegate.sessionDidReceiveChallenge = {
-                session,challenge in
-                return    (URLSession.AuthChallengeDisposition.useCredential,URLCredential(trust:challenge.protectionSpace.serverTrust!))
-            }
-            Alamofire.request("https://garage.jnmsywl.com/api/sms/send", method: .post, parameters: ["mobile": verificationCodeTF.text as Any,"code":"1234","event  ":"register"], encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+            if (self.phoneTextField?.text?.isEmpty)! {
                 
-                guard response.result.isSuccess else {
-                    
-                    SVProgressHUD.showError(withStatus: "网络异常！数据加载失败！")
-                    
-                    finished(JSON([]))
-                    return
+                print("空");
+            }
+            else{
+           
+                button.isUserInteractionEnabled = false;
+                Alamofire.SessionManager.default.delegate.sessionDidReceiveChallenge = {
+                    session,challenge in
+                    return    (URLSession.AuthChallengeDisposition.useCredential,URLCredential(trust:challenge.protectionSpace.serverTrust!))
                 }
-                if let value = response.result.value {
+                Alamofire.request("https://garage.jnmsywl.com/api/sms/send", method: .post, parameters: ["mobile": self.phoneTextField!.text! as Any,"code":"1234","event  ":"register"], encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
                     
-                    let json = JSON(value)
-                    finished(json)
-                }
-            });
+                    guard response.result.isSuccess else {
+                        
+                        print("失败");
+                        return
+                    }
+                    if let value = response.result.value {
+                        
+                        print(value);
+                    }
+                });
                 self.DispatchTimer(timeInterval: 1, repeatCount: 60, handler: { (timer, count) in
                     
                     var title:String = "\(count)s后重发";
@@ -136,11 +138,12 @@ class LoginViewController: SHBaseViewController {
                     }
                     vcBtn.setTitle(title, for: .normal);
                 })
-//            }
-//            else{
-//
-//                print("请输入正确的手机号");
-//            }
+                //            }
+                //            else{
+                //
+                //                print("请输入正确的手机号");
+                //            }
+            }
         }
         vcRightView.addSubview(vcBtn);
         verificationCodeTF.rightView = vcRightView;
